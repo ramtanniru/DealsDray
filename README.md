@@ -6,7 +6,30 @@ This is the frontend part of the **Employee Management System**, built with **Ne
 
 You can view a live demo of the application here:
 
-[Live Demo](#) 
+[Live Demo](deals-dray-six.vercel.app/login)
+
+## Screenshots
+- #### Login
+    - ![login page](public/demo/login.png)
+- #### Home
+    - ![home page](public/demo/home.png)
+- #### Employee details
+    - ![employee page](public/demo/employee.png)
+- #### Add employee details
+    - ![add employee page](public/demo/create.png)
+- #### Edit employee details
+    - ![edit employee page](public/demo/edit.png)
+- #### Delete employee details
+    - ![delete employee](public/demo/delete.png)
+- #### Email error
+    - ![email error page](public/demo/email-error.png)
+- #### Mobile number error
+    - ![mobile error page](public/demo/mobile-error.png)
+- #### Searcch Filter
+    - ![search filter](public/demo/search-filter.png)
+- #### Search Filter result
+    - ![result](public/demo/search-filter-result.png)
+
 
 ### Admin Credentials:
 - **Username**: `admin`
