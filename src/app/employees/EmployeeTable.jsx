@@ -149,7 +149,7 @@ export default function EmployeeTable({ result, setId, setEdit, edit, create}) {
                         </TableCell>;
                       }
                       else if (column.id==='action'){
-                        return <TableCell align="left">
+                        return <TableCell align="left" key={column.id}>
                             <div className='flex flex-row gap-3 justify-between items-center p-3'>
                                 <button className="bg-blue-500 text-white px-3 py-1 rounded-md" onClick={()=>handleEdit(row.id)}>
                                 Edit
@@ -161,9 +161,9 @@ export default function EmployeeTable({ result, setId, setEdit, edit, create}) {
                         </TableCell>;
                       }
                       else if (column.id==='course'){
-                        return <TableCell align="left">
+                        return <TableCell align="left" key={column.id}>
                             <div className='flex flex-wrap gap-3 justify-start items-start'>
-                                {row.courses.map((item)=><p className='text-black'>{item}</p>)}
+                                {row.courses.map((item,id)=><p className='text-black' key={id}>{item}</p>)}
                             </div>
                         </TableCell>;
                       }

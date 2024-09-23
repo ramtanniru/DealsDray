@@ -2,7 +2,6 @@
 import FilterDropdown from '@/components/FilterDropdown';
 import React, { useEffect, useRef, useState, useContext } from 'react'
 import EmployeeTable from './EmployeeTable';
-import {  Modal,   ModalContent,   ModalHeader,   ModalBody,   ModalFooter} from "@nextui-org/modal";
 import CreateModal from '@/components/CreateModal';
 import UpdateModal from '@/components/UpdateModal';
 import { useRouter } from "next/navigation";
@@ -18,8 +17,7 @@ const style = {
     p: 4,
     zIndex: 999999,
 };
-const page = () => {
-    const searchInput = useRef('');
+const Page = () => {
     const [filters,setFilters] = useState([]);
     const [results,setResults] = useState([]);
     const [filteredResults,setFilteredResults] = useState([]);
@@ -29,14 +27,13 @@ const page = () => {
     const [searchStatus,setSearchStatus] = useState('');
     const { isAuthenticated } = useContext(AuthContext);
     const router = useRouter();
+    const searchInput = useRef('');
 
     useEffect(() => {
         if (!isAuthenticated) {
           router.push('/login'); 
         }
     }, [isAuthenticated, router]);
-    
-    if (!isAuthenticated) return null;
 
     useEffect(() => {
         const fetchData = async () => {
@@ -66,7 +63,9 @@ const page = () => {
         };
         fetchData();
         setFilteredResults(results);
-    }, [edit,create]);
+    }, [edit,create,results]);
+
+    if (!isAuthenticated) return null;
 
     const fetchData = async () => {
         try {
@@ -113,4 +112,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

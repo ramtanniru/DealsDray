@@ -1,9 +1,9 @@
 'use client'
 import React, { useRef, useState } from 'react'
 
-const page = () => {
-  const email = useRef('');
+const Page = () => {
   const [emailError,setEmailError] = useState(false)
+  const email = useRef('');
   const sendOtp = ()=>{
 
   }
@@ -24,4 +24,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
