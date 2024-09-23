@@ -70,7 +70,7 @@ const columns = [
     }
 ];
 
-export default function EmployeeTable({ result, setId, setEdit, edit, create}) {
+export default function EmployeeTable({ result, setId, setEdit, setDel }) {
   const [page, setPage] =useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [table,setTable] = useState(result);
@@ -106,7 +106,7 @@ export default function EmployeeTable({ result, setId, setEdit, edit, create}) {
   
       if (response.ok) {
         alert('Item deleted successfully');
-        // You can also trigger a state update or re-fetch the data to update the UI
+        setDel(true);
       } else {
         alert('Failed to delete the item');
       }

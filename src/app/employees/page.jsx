@@ -24,6 +24,7 @@ const Page = () => {
     const [create,setCreate] = useState(false);
     const [edit,setEdit] = useState(false);
     const [id,setId] = useState('');
+    const [del,setDel] = useState(false);
     const [searchStatus,setSearchStatus] = useState('');
     const { isAuthenticated } = useContext(AuthContext);
     const router = useRouter();
@@ -63,7 +64,7 @@ const Page = () => {
         };
         fetchData();
         setFilteredResults(results);
-    }, [edit,create]);
+    }, [edit,create,del]);
 
     if (!isAuthenticated) return null;
 
@@ -107,7 +108,7 @@ const Page = () => {
         {edit && <div style={style} className='w-full backdrop-blur-lg bg-black bg-opacity-50'>
             <UpdateModal setEdit={(value)=>setEdit(value)} id={id}/>
         </div>}
-        <EmployeeTable result={filteredResults} setId={(v)=>setId(v)} setEdit={(v)=>setEdit(v)} edit={edit} create={create}/>
+        <EmployeeTable result={filteredResults} setId={(v)=>setId(v)} setEdit={(v)=>setEdit(v)} setDel={(v)=>setDel(v)}/>
     </div>
   )
 }
