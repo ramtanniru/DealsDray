@@ -63,7 +63,7 @@ const Page = () => {
         };
         fetchData();
         setFilteredResults(results);
-    }, [edit,create,results]);
+    }, [edit,create]);
 
     if (!isAuthenticated) return null;
 
