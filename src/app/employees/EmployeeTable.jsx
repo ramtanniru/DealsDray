@@ -116,7 +116,6 @@ export default function EmployeeTable({ result, setId, setEdit, edit, create}) {
     }
   };
   
-
   return (
     <Paper sx={{ width: '100%', overflow: 'hidden', height:'100%' }}>
       <TableContainer sx={{ maxHeight: 700 }}>
