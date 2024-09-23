@@ -117,8 +117,8 @@ export default function EmployeeTable({ result, setId, setEdit, edit, create}) {
   };
   
   return (
-    <Paper sx={{ width: '100%', overflow: 'hidden', height:'100%' }}>
-      <TableContainer sx={{ maxHeight: 700 }}>
+    <Paper sx={{ width: '100%', overflow: 'hidden', height:'100%', marginBottom: "50px" }}>
+      <TableContainer sx={{ maxHeight: 650 }}>
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
             <TableRow>

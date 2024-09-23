@@ -96,7 +96,7 @@ const Page = () => {
   return (
     <div className="px-32 bg-white min-h-screen flex flex-col gap-10 justify pt-32 items-center">
         <div className='flex flex-row justify-start items-center gap-10 w-full'>
-            <input className='p-2 border rounded-md w-1/3' ref={searchInput} type='text' placeholder='Enter search keyword'/>
+            <input className='p-2 border rounded-md w-1/3 text-gray-700' ref={searchInput} type='text' placeholder='Enter search keyword'/>
             <FilterDropdown setFilters={(v)=>setFilters(v)} filters={filters}/>
             <button className='rounded-md bg-[#01008A] px-5 py-2' onClick={fetchData}>Search</button>
             <button className='rounded-md border border-[#01008A] px-5 py-2 text-[#01008A]' onClick={()=>setCreate(true)}>Create new</button>
