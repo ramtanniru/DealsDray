@@ -22,7 +22,7 @@ export default function UpdateModal({ setEdit, id }) {
 
   useEffect(() => {
     const fetchEmployeeData = async () => {
-      const response = await fetch(`http://localhost:3000/employees/${id}`);
+      const response = await fetch(`https://deals-dray-backend.vercel.app/employees/${id}`);
       if (response.ok) {
         const data = await response.json();
         setName(data.name);
@@ -79,7 +79,7 @@ export default function UpdateModal({ setEdit, id }) {
     };
 
     try {
-      const response = await fetch(`http://localhost:3000/employees/${id}`, {
+      const response = await fetch(`https://deals-dray-backend.vercel.app/employees/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

@@ -36,7 +36,7 @@ export default function CreateModal({ setCreate }) {
 
   const checkEmailDuplicate = async (email) => {
     try {
-      const response = await fetch("http://localhost:3000/employees/email-check", {
+      const response = await fetch("https://deals-dray-backend.vercel.app/employees/email-check", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
@@ -110,7 +110,7 @@ export default function CreateModal({ setCreate }) {
       };
 
       // Make API call to save the employee details in the database
-      const response = await fetch("http://localhost:3000/employees", {
+      const response = await fetch("https://deals-dray-backend.vercel.app/employees", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

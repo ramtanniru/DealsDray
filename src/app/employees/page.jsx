@@ -39,7 +39,7 @@ const Page = () => {
         const fetchData = async () => {
             try {
                 setSearchStatus('Searching...');
-                const response = await fetch("http://localhost:3000/employees", {
+                const response = await fetch("https://deals-dray-backend.vercel.app/employees", {
                     method: "GET",
                     redirect: 'follow',
                 });
@@ -71,7 +71,7 @@ const Page = () => {
         try {
             setSearchStatus('Searching...');
             
-            const response = await fetch("http://localhost:3000/employees/filter", {
+            const response = await fetch("https://deals-dray-backend.vercel.app/employees/filter", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

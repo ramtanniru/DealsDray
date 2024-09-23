@@ -100,7 +100,7 @@ export default function EmployeeTable({ result, setId, setEdit, edit, create}) {
     }
 
     try {
-      const response = await fetch(`http://localhost:3000/employees/${id}`, {
+      const response = await fetch(`https://deals-dray-backend.vercel.app/employees/${id}`, {
         method: 'DELETE',
       });
   
