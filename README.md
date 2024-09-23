@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Employee Management - Frontend
 
-## Getting Started
+This is the frontend part of the **Employee Management System**, built with **Next.js** and styled using **Tailwind CSS**. The frontend interacts with the backend API to manage employee data, with features like adding, updating, and deleting employee records, sorting employee lists, and server-side validation.
 
-First, run the development server:
+## Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+You can view a live demo of the application here:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[Live Demo](#) 
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Admin Credentials:
+- **Username**: `admin`
+- **Password**: `password`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Table of Contents
 
-## Learn More
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Dependencies](#dependencies)
+- [Deployment](#deployment)
+- [Contributors](#contributors)
+- [License](#license)
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Add Employee Details**: Admins can add new employees with details like name, department, and role.
+- **Update Employee Details**: Admins can modify existing employee information.
+- **Delete Employee**: Admins can delete employee records.
+- **Sort Employees**: Users can filter and sort the employee list based on custom filters (like department or role).
+- **Server-Side Validations**: Form data is validated before being submitted to the backend to ensure data integrity.
+- **Responsive UI**: Designed to be fully responsive with **Tailwind CSS**.
+- **Authentication**: Integrated with backend authentication for secured login and admin access.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Installation
 
-## Deploy on Vercel
+### Prerequisites
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Node.js** (v14.x or later)
+- **Next.js** (latest stable version)
+- **Tailwind CSS**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Steps to Run Locally
+
+1. **Clone the Repository:**
+    ```bash
+    git clone https://github.com/ramtanniru/DealsDray.git
+    cd DealsDray
+    ```
+
+2. **Install Dependencies:**
+    ```bash
+    npm install
+    ```
+
+3. **Setup Environment Variables:**
+    Create a `.env.local` file in the root directory and add the following variables:
+
+    ```bash
+    NEXT_PUBLIC_BACKEND_API_URL="http://localhost:4000"  # Backend API URL
+    NEXT_PUBLIC_CLOUDINARY_URL="your_cloudinary_base_url"  # Cloudinary URL for CDN
+    ```
+
+4. **Start the Development Server:**
+    ```bash
+    npm run dev
+    ```
+
+    The app will be available at `http://localhost:3000`.
+
+## Usage
+
+1. Open `http://localhost:3000` in your browser.
+2. Login using the credentials:
+   - **Username**: `admin`
+   - **Password**: `password`
+3. You can now add, update, delete, and sort employees from the admin dashboard.
+
+## Configuration
+
+The project uses the following environment variables:
+
+| Variable                     | Description                                      |
+|-------------------------------|--------------------------------------------------|
+| `NEXT_PUBLIC_BACKEND_API_URL`  | URL of the backend API                           |
+| `NEXT_PUBLIC_CLOUDINARY_URL`   | Cloudinary base URL for CDN content              |
+
+## Dependencies
+
+- **Next.js** - React framework for server-side rendering and static site generation.
+- **Tailwind CSS** - Utility-first CSS framework for rapid UI development.
+- **Fetch** - HTTP client for API requests.
+- **Cloudinary** - CDN for media files.
+- **React Hook Form** - Form management with validation.
+- **SWR** - Data fetching for seamless UI updates.
+
+## Deployment
+
+The project is deployed on **Vercel**. To deploy the frontend:
+
+1. Connect your GitHub repository to Vercel.
+2. Set the following environment variables in the Vercel dashboard:
+    - `NEXT_PUBLIC_BACKEND_API_URL`
+    - `NEXT_PUBLIC_CLOUDINARY_URL`
+3. Vercel will handle the build and deployment.
+
+## Contributors
+
+- **Your Name** - Tanniru Leela Sai Ram
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
