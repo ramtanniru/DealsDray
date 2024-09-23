@@ -127,7 +127,7 @@ export default function EmployeeTable({ result, setId, setEdit, edit, create}) {
                 <TableCell
                   key={column.id}
                   align={column.align}
-                  style={{ minWidth: column.minWidth }}
+                  style={{ minWidth: column.minWidth, backgroundColor: "#01008A", color: '#ffffff', fontWeight: "bold",}}
                   className='bg-[#01008A] text-white font-bold'
                 >
                   {column.label}

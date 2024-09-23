@@ -13,30 +13,20 @@ const LoginPage = () => {
   const { login } = useContext(AuthContext);
   const router = useRouter(); // Updated router usage
 
-  const validateEmail = (email) => {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(email);
-  };
-
   const handleLogin = () => {
-    const email = username.current.value;
+    const user = username.current.value;
     const pwd = password.current.value;
 
     setUsernameError(false);
     setPasswordError(false);
-
-    if (!validateEmail(email)) {
-      setUsernameError(true);
-      return;
-    }
 
     if (pwd === '') {
       setPasswordError(true);
       return;
     }
 
-    if (email === 'admin@example.com' && pwd === 'password') {
-      login(router); // router is passed to login
+    if (user === 'admin' && pwd === 'password') {
+      login(router); 
     } else {
       setPasswordError(true);
     }
@@ -45,23 +35,23 @@ const LoginPage = () => {
   return (
     <div className="min-h-screen flex flex-row justify-between items-center px-32 bg-[#fff] text-black">
       <div className="flex flex-col justify-center items-start gap-10">
-        <h1 className="leading-5">DealsDray</h1>
-        <h2 className="text-[28px] font-semibold">India’s first End to End Event Experience App</h2>
+        <h1 className="leading-5 text-[32px] font-bold">DealsDray</h1>
+        <h2 className="text-[28px] font-semibold">Employee Management System</h2>
         <Image src={"/assets/login.svg"} height={400} width={460} alt="logo" />
       </div>
       <div className="p-10 shadow-xl rounded-md flex flex-col gap-5 items-start justify-center w-1/3 bg-[#fff]">
         <h1 className="text-[30px] font-bold">Get Started</h1>
-        <p className="text-[15px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p className="text-[15px]">Manage employee details with ease</p>
 
         {/* Email input */}
         <div className="flex flex-col gap-2 justify-center items-start w-full">
-          <p>Email address</p>
+          <p>Username</p>
           <input
-            placeholder="Enter email address"
+            placeholder="Enter username"
             ref={username}
             className="border rounded-md p-2 w-full"
           />
-          {usernameError && <p className="text-[#F00] text-[11px]">Please enter a valid email id</p>}
+          {usernameError && <p className="text-[#F00] text-[11px]">Please enter a valid username</p>}
         </div>
 
         {/* Password input */}
