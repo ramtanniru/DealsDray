@@ -130,7 +130,7 @@ The project is deployed on **Vercel**. To deploy the frontend:
 
 ## Contributors
 
-- **Your Name** - Tanniru Leela Sai Ram
+- **Name** - Tanniru Leela Sai Ram
 
 ## License
 
