@@ -6,7 +6,7 @@ This is the frontend part of the **Employee Management System**, built with **Ne
 
 You can view a live demo of the application here:
 
-[Live Demo](deals-dray-six.vercel.app/login)
+[Live Demo](https://deals-dray-six.vercel.app/login)
 
 ## Screenshots
 - #### Login
